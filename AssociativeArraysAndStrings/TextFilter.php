@@ -35,5 +35,3 @@ if (isset($_GET['text']) && isset($_GET['banlist'])){
 
 </body>
 </html>
-
-

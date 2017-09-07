@@ -42,7 +42,7 @@ if (isset($_GET['text'])) {
         $wordCount[$token] += 1;
     }
 
-    $html = "<table>";
+    $html = "<table border='2'>";
     foreach ($wordCount as $key => $value) {
         $html .= "<tr><td>$key</td><td>$value</td></tr>";
     }
@@ -50,7 +50,6 @@ if (isset($_GET['text'])) {
 
     echo $html;
 }
-
 ?>
 </body>
 </html>
