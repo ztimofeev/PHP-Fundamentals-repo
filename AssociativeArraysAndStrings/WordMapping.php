@@ -21,22 +21,22 @@
 <form method="get">
     <fieldset>
         <legend>Write your text below:</legend>
-            <textarea name="text" rows="5" cols="50"></textarea>
+            <textarea name="input" rows="5" cols="50"></textarea>
             <br />
-            <input type="submit" value="Send" />
+            <input type="submit" value="Count words" />
     </fieldset>
 <hr />
 <br />
 
 <?php
-if (isset($_GET['text'])) {
-    $text = $_GET['text'];
+if (isset($_GET['input'])) {
+    $text = $_GET['input'];
     $text = strtolower($text);
     $tokens = preg_split("/\W+/", $text, -1,PREG_SPLIT_NO_EMPTY);
 
     $wordCount = [];
     foreach ($tokens as $token) {
-        if (!isset($wordCount[$token])){
+        if (!array_key_exists($token, $wordCount)){
             $wordCount[$token] = 0;
         }
         $wordCount[$token] += 1;

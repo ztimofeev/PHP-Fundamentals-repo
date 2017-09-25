@@ -30,6 +30,7 @@ function upSpeedMessage($sp, $lim) {
     } elseif ($speedDiff >= 0) {
         return 'speeding';
     }
+    return 'error';
 }
 
 echo upSpeedMessage($speed, setSpeedLimit($area));

@@ -15,5 +15,3 @@ while (true) {
         break;
     }
 }
-
-//echo var_dump($nums)."\n";

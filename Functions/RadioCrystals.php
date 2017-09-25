@@ -3,10 +3,10 @@ $input = trim(fgets(STDIN));
 $nums = explode(', ', $input);
 $nums = array_map('floatval', $nums);
 
-$finalTickness = $nums[0];
+$finalThickness = $nums[0];
 for ($i = 1; $i < count($nums); $i++) {
     $currentCrystal = $nums[$i];
-    cristalProcessing($finalTickness, $currentCrystal);
+    cristalProcessing($finalThickness, $currentCrystal);
 }
 
 function cristalProcessing($endThickness, $rawCrystal) {
@@ -33,7 +33,6 @@ function cristalProcessing($endThickness, $rawCrystal) {
     $counter = 0;
 
     while($isNotReady) {
-
         if (($rawCrystal -  $rawCrystal * 0.2 )>= $endThickness) {
             $counter++;
             $rawCrystal -= $rawCrystal * 0.2;
