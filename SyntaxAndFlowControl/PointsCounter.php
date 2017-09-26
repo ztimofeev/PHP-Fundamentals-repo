@@ -32,7 +32,7 @@ while ($input != "Result") {
 
     $input = trim(fgets(STDIN));
 }
-
+//The idea of the data structure is as following:
 //$results = [
 //    'team' => [
 //        'players' => [
